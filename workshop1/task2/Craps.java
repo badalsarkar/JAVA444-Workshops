@@ -11,12 +11,13 @@
 //if same as stored value you win
 
 
+
 class Craps{
     public static void main(String [] args){
         int dice1, dice2,sum,point;
         //generate random number
-        dice1=((int)(Math.random()*6))+1;
-        dice2=((int)(Math.random()*6))+1;
+        dice1=rollDice();
+        dice2=rollDice();
         sum=dice1+dice2;
         if(sum==2||sum==3||sum==12){
             System.out.println("You rolled " + dice1 +"+"+dice2+"="+sum);
@@ -35,8 +36,8 @@ class Craps{
             do{
                 //resetting sum
                 sum=0;
-                dice1=((int)(Math.random()*6))+1;
-                dice2=((int)(Math.random()*6))+1;
+                dice1=rollDice();
+                dice2=rollDice();
                 sum=dice1+dice2;
                 System.out.println("You rolled " + dice1 +"+"+dice2+"="+sum);
                 if(sum==7){
@@ -53,6 +54,12 @@ class Craps{
             }while(keepRolling);
         }
     }
+
+
+    public static int rollDice(){
+        return ((int)(Math.random()*6))+1;
+    }
+
 };
 
 
