@@ -1,3 +1,8 @@
+//Student name: Badal Sarkar
+//Student id: 137226189
+//
+
+
 //this class provides structure and functionality 
 //for a loan provided to a bank
 
@@ -9,6 +14,7 @@ class BankLoan{
 
     //methods
     public BankLoan(){
+
     }
 
     public BankLoan(int id, double amt, boolean status){
@@ -31,26 +37,36 @@ class BankLoan{
     }
 
 
+    //sets the borrower id
     public void setBorrowerId(int id){
         if(id>=0)
             borrowerId=id;
     }
 
 
+    //returns the borrower id
     public int getBorrowerId(){
         return borrowerId;
     }
 
 
+
+    //sets the loan status
     public void setLoanStatus(boolean status){
         safe=status;
     }
 
+
+
+    //returns the safety status
     public boolean getSafe(){
         return safe;
     }
 
 
+
+
+    //returns the loan amount
     public double getLoanAmount(){
         return loanAmount;
     }

@@ -1,6 +1,8 @@
+//Student name: Badal Sarkar
+//Student id: 137226189
+//
 //this class stores information about multiple bank
-
-
+//provides functionality to check bank's safety status
 class BankIndustry{
     private Bank[] allBanks;
     private int nextIndex=0;
@@ -108,6 +110,4 @@ class BankIndustry{
         System.out.println("The unsafe banks are " +unsafeBankIds);
     }
         
-
-
 }

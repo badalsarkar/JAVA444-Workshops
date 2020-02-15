@@ -1,5 +1,12 @@
+//Student name: Badal Sarkar
+//Student id: 137226189
 
 
+
+//this class provides structure to store a word
+//the class provides functionality to hide the word, 
+//match a letter with the original word
+//also tells if the hidden word is fully matched or not
 class Word{
     private String original="";
     private char[] hidden;
@@ -20,21 +27,27 @@ class Word{
     }
 
 
+    //returns if the word has been already used
     public boolean used(){
         return this.used;
     }
 
 
+    //returns the word in hidden form
     public String getPuzzled(){
         return new String(hidden);
     }
 
 
+    //returns the original word
     public String getOriginal(){
         return original;
     }
 
 
+
+    //this function updates the hidden word
+    //by replacing the * with the original letter at the index
     private void updatePuzzledWord(int index, char c){
         for(int i=0; i<hidden.length; i++){
             if(i==index){
@@ -45,6 +58,8 @@ class Word{
 
 
 
+    //this function updates the hidden word
+    //it replaces the original word with the parameter
     private void updatePuzzledWord(char c){
         hidden=new char[original.length()];
         for(int i=0; i<hidden.length; i++){
@@ -69,6 +84,8 @@ class Word{
 
 
     //match a letter to the original word
+    //if matched, it updates the hidden word 
+    //to reflect the matched letter
     public boolean match(char c){
         int index=-1;
         int startPos=0; 
@@ -85,6 +102,11 @@ class Word{
     }
 
 
+
+
+
+    //this function checks if the hidden word 
+    //is fully matched
     public boolean fullMatched(){
         boolean result=true;
         for(char c: hidden){
@@ -95,8 +117,6 @@ class Word{
         }
         return result;
     }
-
-
 
 
 }

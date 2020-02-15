@@ -1,7 +1,7 @@
 //student Name: Badal Sarkar
 //Student Id: 137226189
-import java.util.Scanner;
 
+import java.util.Scanner;
 
 
 //this class provides functionality for 

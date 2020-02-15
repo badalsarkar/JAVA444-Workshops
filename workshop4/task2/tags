@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+HangMan	HangMan.java	/^public class HangMan{$/;"	c
+UserInteraction	UserInteraction.java	/^class UserInteraction{$/;"	c
+Word	Word.java	/^    public Word(String word){$/;"	m	class:Word
+Word	Word.java	/^class Word{$/;"	c
+WordCollection	WordCollection.java	/^    public WordCollection(String [] collection){$/;"	m	class:WordCollection
+WordCollection	WordCollection.java	/^class WordCollection{$/;"	c
+addToCorrectLetter	HangMan.java	/^    private static void addToCorrectLetter(char c){$/;"	m	class:HangMan	file:
+addToTriedLetter	HangMan.java	/^    private static void addToTriedLetter(char c){$/;"	m	class:HangMan	file:
+allWords	WordCollection.java	/^    private Word [] allWords;$/;"	f	class:WordCollection	file:
+alreadyCorrect	HangMan.java	/^    private static boolean alreadyCorrect(char letter){$/;"	m	class:HangMan	file:
+alreadyTried	HangMan.java	/^    private static boolean alreadyTried(char letter){$/;"	m	class:HangMan	file:
+correctLetter	HangMan.java	/^    private static char[] correctLetter;$/;"	f	class:HangMan	file:
+displayNextWord	WordCollection.java	/^    public void displayNextWord(){$/;"	m	class:WordCollection
+fullMatch	Word.java	/^    private boolean fullMatch=false;$/;"	f	class:Word	file:
+fullMatched	Word.java	/^    public boolean fullMatched(){$/;"	m	class:Word
+getAmount	UserInteraction.java	/^    public static double getAmount(String question, double min){$/;"	m	class:UserInteraction
+getAmount	UserInteraction.java	/^    public static double getAmount(String question, double min, double max){$/;"	m	class:UserInteraction
+getChar	UserInteraction.java	/^    public static char getChar(){$/;"	m	class:UserInteraction
+getLine	UserInteraction.java	/^    public static String getLine(){$/;"	m	class:UserInteraction
+getNumber	UserInteraction.java	/^    public static int getNumber(String question){$/;"	m	class:UserInteraction
+getNumber	UserInteraction.java	/^    public static int getNumber(String question, String[] options, int min){$/;"	m	class:UserInteraction
+getNumber	UserInteraction.java	/^    public static int getNumber(String question, String[] options, int min, int max){$/;"	m	class:UserInteraction
+getOriginal	Word.java	/^    public String getOriginal(){$/;"	m	class:Word
+getPuzzled	Word.java	/^    public String getPuzzled(){$/;"	m	class:Word
+getWord	WordCollection.java	/^    public Word getWord(){$/;"	m	class:WordCollection
+hidden	Word.java	/^    private char[] hidden;$/;"	f	class:Word	file:
+input	UserInteraction.java	/^    private static Scanner input= new Scanner(System.in);$/;"	f	class:UserInteraction	file:
+main	HangMan.java	/^    public static void main(String[] args){$/;"	m	class:HangMan
+match	Word.java	/^    public boolean match(char c){$/;"	m	class:Word
+missedLetter	HangMan.java	/^    private static char[] missedLetter;$/;"	f	class:HangMan	file:
+original	Word.java	/^    private String original="";$/;"	f	class:Word	file:
+printError	UserInteraction.java	/^    public static void printError(String msg){$/;"	m	class:UserInteraction
+printError	UserInteraction.java	/^    public static void printError(String msg, char c){$/;"	m	class:UserInteraction
+printMsg	UserInteraction.java	/^    public static void printMsg(String msg){$/;"	m	class:UserInteraction
+printMsg	UserInteraction.java	/^    public static void printMsg(String msg, String value){$/;"	m	class:UserInteraction
+printMsg	UserInteraction.java	/^    public static void printMsg(String msg, double value){$/;"	m	class:UserInteraction
+printMsg	UserInteraction.java	/^    public static void printMsg(String msg, int value){$/;"	m	class:UserInteraction
+printOriginal	Word.java	/^    public void printOriginal(){$/;"	m	class:Word
+printPuzzled	Word.java	/^    public void printPuzzled(){$/;"	m	class:Word
+thereIsUnusedWord	WordCollection.java	/^    private boolean thereIsUnusedWord(){$/;"	m	class:WordCollection	file:
+updatePuzzledWord	Word.java	/^    private void updatePuzzledWord(char c){$/;"	m	class:Word	file:
+updatePuzzledWord	Word.java	/^    private void updatePuzzledWord(int index, char c){$/;"	m	class:Word	file:
+use	Word.java	/^    public void use(){$/;"	m	class:Word
+used	Word.java	/^    private boolean used=false;$/;"	f	class:Word	file:
+used	Word.java	/^    public boolean used(){$/;"	m	class:Word
+wordCollection	HangMan.java	/^    private static WordCollection wordCollection= new WordCollection(words);$/;"	f	class:HangMan	file:
+words	HangMan.java	/^    private static String [] words={"Programming", "Java", "Object", "Reference", "Internet", "Variable"};$/;"	f	class:HangMan	file:

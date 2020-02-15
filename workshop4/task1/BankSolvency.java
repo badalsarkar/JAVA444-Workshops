@@ -1,12 +1,16 @@
+//Student name: Badal Sarkar
+//Student id: 137226189
+//
+
+
+
+
 //this is the main class
-
-
-
-
 public class BankSolvency{
+        private static int totalBank;
 
     public static void main(String[] args){
-        int totalBank= UserInteraction.getNumber("Number of Banks: ");
+        totalBank= UserInteraction.getNumber("Number of Banks: ");
         int minAsset= UserInteraction.getNumber("Minimum asset limit: ");
         //set minimum asset
         Bank.setMinAsset(minAsset);
@@ -14,17 +18,16 @@ public class BankSolvency{
         //instantiate a new bank industry
         BankIndustry myIndustry=new BankIndustry(totalBank);
         //print instruction to input bank information
-        System.out.println("Enter the bank information as following-");
-        System.out.println("Bank Id [space] Balance [space] total banks loaned to [space] Bank Id [space] Amount loaned");
         try{
             //read user input for new bank
             //create individual bank
             for(int i=0;i<totalBank;i++){
-                String line=UserInteraction.getLine(); 
-                String[] lineArray= line.split(" ");
-                double[][]loanedTo= extractLoanedToData(lineArray, Integer.parseInt(lineArray[2]));
+                System.out.println();
+                UserInteraction.printMsg("Enter the information for bank :",i);
+                double balance= UserInteraction.getAmount("Enter the balance :", 1);
+                double[][] loanedTo=getLoanInfo(i);
                 //create new bank and add to bank industry
-                myIndustry.addNewBank(Integer.parseInt(lineArray[0]), Double.parseDouble(lineArray[1]), loanedTo);
+                myIndustry.addNewBank(i, balance, loanedTo);
             }
         }
         catch(Exception e){
@@ -32,7 +35,6 @@ public class BankSolvency{
         }
         //update the borrower list for all banks in the industry
         myIndustry.updateBorrowedFromList();
-        
         //evaluate the safety status of all banks in the industry
         myIndustry.evaluateBankSafety();
         //print the safety status of all banks in the industry
@@ -47,24 +49,24 @@ public class BankSolvency{
 
 
 
-    // extract data starting from array index 3
-    // there will "length" number of rows
-    // each row has two column- id and amount
-    private static double [][] extractLoanedToData(String[] data, int length){
-        int pos=3;
-        double [][]result= new double[length][2];
-        for(int i=0; i<length; i++){
-            try{
-                if(data[0]!=data[pos]){
-                    result[i][0]=Double.parseDouble(data[pos++]);
-                    result[i][1]=Double.parseDouble(data[pos++]);
-                }
-            }
-            catch(Exception e){
-                System.out.println(e);
+
+
+    //function to get loan information
+    // this function ask user to input loan information
+    // then creates a two dimensional array and returns it
+    private static double[][] getLoanInfo(int id){
+        System.out.println("Enter the information of loans provided to different banks: ");
+        double[][] loan= new double[totalBank-1][];
+        int index=0;
+        for(int i=0; i<totalBank && index<loan.length; i++){
+            if(i!=id){
+                loan[index]=new double [2];
+                loan[index][0]=i;
+                System.out.print("Loan provided to bank " +i);
+                loan[index][1]=UserInteraction.getAmount(": ",0.0);
+                index++;
             }
         }
-        return result;
-        
+        return loan;
     }
 }

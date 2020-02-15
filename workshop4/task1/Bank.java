@@ -1,5 +1,12 @@
+//Student name: Badal Sarkar
+//Student id: 137226189
+//
+
+
+
 //Bank class
-//this class provides structure for a bank object
+//this class provides structure and functionality for a bank object
+//
 
 
 class Bank{
@@ -19,16 +26,28 @@ class Bank{
     //overloaded constructor
     public Bank(int id, double balance, double[][] loanedTo){
         this.id=id;
+        int length=0;
         if(dataIsValid(balance, loanedTo)){
             this.balance=balance;
-            loanPortfolio= new BankLoan[loanedTo.length];
-            for(int i=0; i<loanPortfolio.length; i++){
-                loanPortfolio[i]= new BankLoan(loanedTo[i]);
+            for(int i=0; i<loanedTo.length; i++){
+                if(loanedTo[i][1]!=0){
+                    length++;
+                }
+            }
+            loanPortfolio= new BankLoan[length];
+            length=0;
+            for(int i=0; i<loanedTo.length; i++){
+                if(loanedTo[i][1]!=0){
+                    loanPortfolio[length]= new BankLoan(loanedTo[i]);
+                    length++;
+                }
             }
         }
     }
 
 
+
+    //function to set minAsset
     public static void setMinAsset(double amt){
         if(amt>0){
             minAsset=amt;
@@ -36,6 +55,8 @@ class Bank{
     }
 
 
+
+    //function to get bank's id
     public int getId(){
         return id;
     }
@@ -44,6 +65,7 @@ class Bank{
 
 
     //set borrowed from 
+    //this function add a new entry to the borrowedFrom array
     public void setBorrowedFrom(int id){
         int length=1;
         int[] temp;
@@ -130,29 +152,6 @@ class Bank{
         }
 
     }
-
-
-
-
-
-
-
-
-    //print
-    public void print(){
-        System.out.println("The bank id is: " + id);
-        System.out.println("The minimum asset is: "+ minAsset);
-        System.out.println("The balance is: "+ balance);
-        System.out.println("Total banks loaned to :"+ loanPortfolio.length);
-        System.out.println("The bank is "+ getSafetyStatus());
-        System.out.println("This bank borrowed from following banks: ");
-        for(int id: borrowedFrom){
-            System.out.println(id);
-        }
-    }
-
-
-
 
     
 }

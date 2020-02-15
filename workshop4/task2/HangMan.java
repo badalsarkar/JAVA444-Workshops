@@ -1,8 +1,8 @@
+//Student name: Badal Sarkar
+//Student id: 137226189
+//
+//
 //main program
-//
-//
-//
-
 
 public class HangMan{
     private static String [] words={"Programming", "Java", "Object", "Reference", "Internet", "Variable"};
@@ -57,6 +57,10 @@ public class HangMan{
 // end of main
 
 
+    //this function checks if the parameter 
+    //exists in the missedLetter array
+    //this function is used to check if a letter 
+    //is already tried by player
     private static boolean alreadyTried(char letter){
         boolean result=false;
         if(missedLetter!=null){
@@ -71,6 +75,9 @@ public class HangMan{
     }
 
 
+
+
+    //this function add the parameter to the missedLetter array
     private static void addToTriedLetter(char c){
         if(missedLetter==null){
             missedLetter= new char[1];
@@ -85,6 +92,13 @@ public class HangMan{
     }
 
 
+
+
+
+    //this function checks if the parameter exists in 
+    //the correctLetter array
+    //this function is used to check if a letter is 
+    //already present in the word
     private static boolean alreadyCorrect(char letter){
         boolean result=false;
         if(correctLetter!=null){
@@ -99,7 +113,9 @@ public class HangMan{
     }
 
 
-    //add a letter to the correctLetter array
+
+
+    //this function add the parameter to the correctLetter array
     private static void addToCorrectLetter(char c){
         if(correctLetter==null){
             correctLetter=new char [1];

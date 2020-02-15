@@ -1,12 +1,15 @@
+//Student name: Badal Sarkar
+//Student id: 137226189
+//
+//
 //this class provides structure to store all the words
 //randomly display a word
-//evaluate user input against word
 
 class WordCollection{
     private Word [] allWords;
 
-
     //methods
+    //constructor
     public WordCollection(String [] collection){
         if(collection!=null){
             allWords=new Word[collection.length];
@@ -21,6 +24,8 @@ class WordCollection{
 
 
 
+    //this function randomly selects a word from the 
+    //array, and returns it.
     public Word getWord(){
         boolean loop=false;
         Word result=null;
@@ -42,6 +47,10 @@ class WordCollection{
 
 
 
+
+
+
+    //displays next word
     public void displayNextWord(){
         Word w=getWord();
         if(w!=null){
@@ -56,6 +65,8 @@ class WordCollection{
 
 
 
+    //this function checks if there is unused word in the array
+    //
     private boolean thereIsUnusedWord(){
         boolean result=false;
         for(Word w: allWords){
