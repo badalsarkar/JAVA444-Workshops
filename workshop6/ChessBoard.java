@@ -1,4 +1,5 @@
-
+//student name: Badal Sarkar
+//student id: 137226189
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -41,6 +42,7 @@ public class ChessBoard extends Application{
         }
         Scene scene= new Scene(grid);
         stage.setTitle("Chess Board");
+	stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
