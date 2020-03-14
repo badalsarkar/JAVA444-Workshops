@@ -1,0 +1,24 @@
+Random Access File
+
+Advantage:
+Random Access File allows us to read or write data in a random order using a file pointer. This is beneficial
+because we can instantly access any chunk of data from the file. 
+
+
+Disadvantage:
+
+
+Usage:
+
+
+
+Syntax:
+
+
+Constructors:
+(source: https://docs.oracle.com/javase/7/docs/api/java/io/RandomAccessFile.html)
+    1. RandomAccessFile(File file, String mode)
+    2. RandomAccessFile(String name, String mode)
+
+
+
