@@ -10,6 +10,7 @@ public class TesterConnectFour{
         //this is the column, the player wants to insert 
         int preferredCol=1;
         int winner=0;
+        newGame.print();
 
         do{
             System.out.println("Plyer: "+player);
